@@ -7,7 +7,10 @@ type Props = {
 
 const Breadcrump = ({ cssClass }: Props) => (
   <div className={cssClass}>
-    <Link href="/">Home</Link> / <Link href="/">Adminitration</Link> /{" "}
+    <Link href="/">Home</Link>
+    <i>&gt;</i>
+    <Link href="/">Adminitration</Link>
+    <i>&gt;</i>
     <span>Logger search</span>
   </div>
 );
