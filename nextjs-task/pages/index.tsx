@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Breadcrump from "@/components/breadcrump";
+import Pagination from "@/components/pagination";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,13 @@ export default function Home() {
       </Head>
       <main className={styles.main + " " + inter.className}>
         <Breadcrump cssClass={styles.breadcrump} />
-        <div className={styles.description}>
-          <div>some content</div>
+        <div className={styles.searchboxes}>
+          <div>Search boxes</div>
         </div>
-
-        <div className={styles.center}>Some other content</div>
+        <div className={styles.table}>
+          <div>Table content</div>
+          <Pagination total={10} cssClass={styles.pagination} />
+        </div>
       </main>
     </>
   );

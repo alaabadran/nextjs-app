@@ -1,16 +1,32 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: normal;
   align-items: start;
-  padding: 6rem;
+  padding: 1rem 5rem;
   min-height: 100vh;
 }
 
+.breadcrump {
+  font-size: 0.7rem;
+}
 .breadcrump * {
   display: inline-block;
-  padding: 2px 12px;
-  font-size: 0.7rem;
+  padding: 2px 0;
+  margin-right: 5px;
+  font-style: normal;
+}
+.table {
+  display: inherit;
+  width: 100%;
+  margin: 0.7rem 0;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #ccc;
+}
+.pagination {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
 }
 
 .description {
@@ -22,6 +38,14 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+}
+.searchboxes {
+  display: inherit;
+  width: 100%;
+  justify-content: start;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  border-top: #999 solid 1px;
 }
 
 .description a {
