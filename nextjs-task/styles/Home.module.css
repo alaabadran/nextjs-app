@@ -2,9 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: normal;
-  align-items: start;
+  align-items: center;
   padding: 1rem 5rem;
   min-height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  align-items: start;
 }
 
 .breadcrump {
