@@ -18,6 +18,10 @@ class Home extends Component {
     };
   }
 
+  componentDidMount = () => {
+    // to load data from API.
+  };
+
   render = () => {
     return (
       <>
