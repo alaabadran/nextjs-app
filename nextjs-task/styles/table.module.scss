@@ -1,4 +1,17 @@
 .headerRow {
+  font-weight: bold;
+}
+.headerRow,
+.row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+.headerRow div,
+.row div {
+  width: 14%;
+  padding: 4px 8px;
+}
+.headerRow div {
+  padding: 12px 8px 5px;
 }

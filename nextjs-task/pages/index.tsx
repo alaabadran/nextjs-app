@@ -20,6 +20,25 @@ class Home extends Component {
 
   componentDidMount = () => {
     // to load data from API.
+    if (this.state?.count == 0) {
+      fetch("https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f")
+        .then((response) => {
+          // let data = response.json();
+          // console.log("Alaa", data);
+          return response.json();
+          // this.setState({ data: data.result.auditLog });
+        })
+        .then((allData) => {
+          console.log("fetched");
+          this.setState({
+            count: allData.result.auditLog.length,
+            logs: allData.result.auditLog,
+          });
+        })
+        .catch((err) => {
+          console.error(err.message);
+        });
+    }
   };
 
   render = () => {
@@ -39,7 +58,7 @@ class Home extends Component {
               <Filters />
             </div>
             <div className={styles.table}>
-              <LoggerTable data={[{ name: "item" }, { name: "item" }]} />
+              <LoggerTable data={this.state.logs} />
               <Pagination total={10} cssClass={styles.pagination} />
             </div>
           </div>

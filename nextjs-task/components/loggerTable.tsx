@@ -13,14 +13,20 @@ const LoggerTable = ({ data }: Props) => {
         <div>Application ID</div>
         <div>Action</div>
         <div>Action details</div>
-        <div>Log ID</div>
+        <div>Log info</div>
         <div>Date</div>
       </div>
-      {data.map((x, i) => {
+      {data.map((item, i) => {
         return (
           <div key={i}>
-            <div>
-              <div>some</div>
+            <div className={styles.row}>
+              <div>{item.logId}</div>
+              <div>{item.actionType}</div>
+              <div>{item.applicationId}</div>
+              <div>{item.actionType}</div>
+              <div>{item.actionType}</div>
+              <div>{item.logInfo}</div>
+              <div>{item.creationTimestamp}</div>
             </div>
           </div>
         );
