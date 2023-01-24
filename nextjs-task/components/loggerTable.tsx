@@ -7,7 +7,7 @@ type Props = {
 const LoggerTable = ({ data }: Props) => {
   return (
     <>
-      <div>
+      <div className={styles.headerRow}>
         <div>Log ID</div>
         <div>Action type</div>
         <div>Application ID</div>
@@ -18,11 +18,11 @@ const LoggerTable = ({ data }: Props) => {
       </div>
       {data.map((x, i) => {
         return (
-          <>
+          <div key={i}>
             <div>
               <div>some</div>
             </div>
-          </>
+          </div>
         );
       })}
     </>
